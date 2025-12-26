@@ -1,0 +1,23 @@
+<div class="page">
+  <a routerLink="/users">← Back to users</a>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="!loading">
+  <h2>{{ user?.firstName || user?.username || user?.name }}</h2>
+  <div *ngIf="user">
+    <p>Email: {{ user.email }}</p>
+    <p>Phone: {{ user.phone }}</p>
+    <p>Company: {{ user.company?.name }}</p>
+  </div>
+
+  <h3>Posts</h3>
+  <div *ngIf="posts.length === 0">No posts</div>
+  <div class="list">
+    <a *ngFor="let p of posts" [routerLink]="['/posts', p.id]" class="card">
+      <div class="body">
+        <div class="title">{{ p.title }}</div>
+        <div class="sub">{{ p.body | slice:0:80 }}...</div>
+      </div>
+    </a>
+  </div>
+  </div>
+</div>

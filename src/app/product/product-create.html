@@ -1,0 +1,18 @@
+<div class="page">
+  <a routerLink="/products">← Back to products</a>
+  <h2>New Product</h2>
+  <form [formGroup]="form" (ngSubmit)="create()">
+    <label>Title<br><input formControlName="title" /></label>
+    <label>Description<br><textarea formControlName="description"></textarea></label>
+    <label>Price<br><input type="number" formControlName="price" /></label>
+    <label>Image<br>
+      <input type="file" accept="image/*" (change)="onImageChange($event)" class="file-input">
+      <div *ngIf="imagePreview" class="image-preview">
+        <img [src]="imagePreview" alt="Preview">
+      </div>
+    </label>
+    <div style="margin-top:8px">
+      <button type="submit">Create</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+:host{display:block;padding:2rem;max-width:1200px;margin:0 auto}
+a{color:#3498db;font-weight:500;margin-bottom:1rem;display:inline-block}
+a:hover{color:#2980b9}
+h2{color:#2c3e50;margin:1rem 0}
+p{color:#7f8c8d;margin:0.5rem 0}
+h3{margin-top:2rem;margin-bottom:1rem;color:#2c3e50}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem;margin-top:1rem}
+.card{display:block;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:all 0.3s;border:1px solid #e8ecef}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(52,152,219,0.15)}
+.title{font-weight:600;color:#2c3e50;margin-bottom:0.5rem}
+.sub{color:#7f8c8d;font-size:0.9rem;line-height:1.5}

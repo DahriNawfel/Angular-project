@@ -1,0 +1,10 @@
+
+:host{display:block;padding:2rem;max-width:1200px;margin:0 auto}
+h2{color:#2c3e50;margin-bottom:1.5rem}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.card{display:flex;align-items:center;padding:1rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:all 0.3s;border:1px solid #e8ecef}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(52,152,219,0.15)}
+.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:18px;margin-right:1rem;flex-shrink:0}
+.body{flex:1;min-width:0}
+.title{font-weight:600;color:#2c3e50;margin-bottom:4px}
+.sub{font-size:0.875rem;color:#95a5a6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

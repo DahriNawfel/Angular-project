@@ -1,0 +1,22 @@
+<div class="page">
+  <a routerLink="/products">← Back to products</a>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="!loading">
+  <h2>{{ product?.title }}</h2>
+  <div *ngIf="imagePreview" class="image-preview-large">
+    <img [src]="imagePreview" [alt]="product?.title">
+  </div>
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <label>Title<br><input formControlName="title" /></label>
+    <label>Description<br><textarea formControlName="description"></textarea></label>
+    <label>Price<br><input type="number" formControlName="price" /></label>
+    <label>Change Image<br>
+      <input type="file" accept="image/*" (change)="onImageChange($event)" class="file-input">
+    </label>
+    <div style="margin-top:8px">
+      <button type="submit">Save</button>
+      <button type="button" (click)="remove()">Delete</button>
+    </div>
+  </form>
+  </div>
+</div>

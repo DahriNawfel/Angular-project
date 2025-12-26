@@ -1,0 +1,5 @@
+
+nav{background:#fff;padding:0;border-bottom:2px solid #e8ecef;box-shadow:0 2px 4px rgba(0,0,0,0.05);display:flex;gap:0}
+nav a{padding:16px 24px;display:inline-block;color:#7f8c8d;font-weight:500;transition:all 0.2s;border-bottom:3px solid transparent}
+nav a:hover{color:#3498db;background:#f8f9fa}
+nav a.active{color:#3498db;border-bottom-color:#3498db}

@@ -1,0 +1,14 @@
+<div class="page">
+  <h2>All Posts</h2>
+  <div *ngIf="loading">Loading...</div>
+  <div class="list" *ngIf="!loading && posts.length > 0">
+    <a *ngFor="let p of posts" [routerLink]="['/posts', p.id]" class="card">
+      <div class="body">
+        <div class="title">{{ p.title }}</div>
+        <div class="sub">{{ p.body | slice:0:100 }}...</div>
+        <div class="meta">Author: <a [routerLink]="['/users', p.userId]">{{ p.authorName }}</a></div>
+      </div>
+    </a>
+  </div>
+  <div *ngIf="!loading && posts.length === 0">No posts found</div>
+</div>

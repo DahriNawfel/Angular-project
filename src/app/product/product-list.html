@@ -1,0 +1,16 @@
+<div class="page">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h2>Products</h2>
+    <a routerLink="/products/new">+ New</a>
+  </div>
+  <div *ngIf="loading">Loading...</div>
+  <div class="list" *ngIf="!loading && products.length > 0">
+    <a *ngFor="let p of products" [routerLink]="['/products', p.id]" class="card">
+      <img *ngIf="p.thumbnail" [src]="p.thumbnail" [alt]="p.title" class="product-img">
+      <div class="title">{{ p.title }}</div>
+      <div class="sub">{{ p.description | slice:0:100 }}...</div>
+      <div class="price">{{ p.price | currency:'EUR' }}</div>
+    </a>
+  </div>
+  <div *ngIf="!loading && products.length === 0">No products found</div>
+</div>
