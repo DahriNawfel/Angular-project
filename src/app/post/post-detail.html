@@ -9,7 +9,7 @@
   <div *ngIf="comments.length === 0">No comments</div>
   <div class="comments">
     <div *ngFor="let c of comments" class="comment">
-      <div class="author">{{ c.user?.username || ('User ' + (c.userId || c.user?.id || '')) }}</div>
+      <div class="author">{{ c.authorName }}</div>
       <div class="body">{{ c.body }}</div>
     </div>
   </div>
